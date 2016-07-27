@@ -19,6 +19,7 @@ class Producto(models.Model):
     descripcion = models.CharField(max_length=200)
     cantidad = models.IntegerField()
     estado = models.BooleanField(default=False)
+    actualizacion = models.DateTimeField(auto_now=False, auto_now_add=True)
     categoria = models.ForeignKey(Categoria)
 
     '''def __str__(self):
